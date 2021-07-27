@@ -12,6 +12,8 @@ pts = pts.reshape((-1,1,2))
 cv.polylines(img,[pts],True,(0,255,255))
 
 #秀圖
+cv.namedWindow('test',cv.WINDOW_AUTOSIZE)
 cv.imshow('test',img)
 cv.waitKey(0)
 cv.destroyAllWindows()
+cv.imwrite('test.png',img)
